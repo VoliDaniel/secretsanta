@@ -1,5 +1,5 @@
-[00:00:01.072] Server  LOG      ✓ Ready in 712ms
-[00:00:04.192] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.780] Server  LOG      ✓ Ready in 1295ms
+[00:00:05.141] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -40,8 +40,8 @@ It can also happen if the client has a browser extension installed which messes 
                                 aria-hidden={true}
                                 className="scratch-foil pointer-events-none absolute inset-0"
                                 style={{
-+                                 animationDelay: "3.2071706617824915s"
--                                 animation-delay: "2.99817s"
++                                 animationDelay: "1.2050565683602943s"
+-                                 animation-delay: "3.03426s"
                                 }}
                               >
                     <ScratchCard hint={{id:2,title:"Co...", ...}} scratched={false} onScratch={function onScratch} ...>
@@ -60,8 +60,8 @@ It can also happen if the client has a browser extension installed which messes 
                                 aria-hidden={true}
                                 className="scratch-foil pointer-events-none absolute inset-0"
                                 style={{
-+                                 animationDelay: "1.257380822923328s"
--                                 animation-delay: "3.00221s"
++                                 animationDelay: "0.7251466371749493s"
+-                                 animation-delay: "3.12864s"
                                 }}
                               >
                     <ScratchCard hint={{id:3,title:"Fe...", ...}} scratched={false} onScratch={function onScratch} ...>
@@ -80,8 +80,8 @@ It can also happen if the client has a browser extension installed which messes 
                                 aria-hidden={true}
                                 className="scratch-foil pointer-events-none absolute inset-0"
                                 style={{
-+                                 animationDelay: "2.870260945982706s"
--                                 animation-delay: "3.17933s"
++                                 animationDelay: "2.4920627010990857s"
+-                                 animation-delay: "2.98574s"
                                 }}
                               >
                     <ScratchCard hint={{id:4,title:"Fi...", ...}} scratched={false} onScratch={function onScratch} ...>
@@ -100,118 +100,8 @@ It can also happen if the client has a browser extension installed which messes 
                                 aria-hidden={true}
                                 className="scratch-foil pointer-events-none absolute inset-0"
                                 style={{
-+                                 animationDelay: "2.9932832890279384s"
--                                 animation-delay: "2.96566s"
-                                }}
-                              >
-                  ...
-        ...
-      ...
-
-[00:00:37.625] Server  LOG      ✓ Compiled in 66ms
-[00:01:44.620] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
-
-- A server/client branch `if (typeof window !== 'undefined')`.
-- Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
-- Date formatting in a user's locale which doesn't match the server.
-- External changing data without sending a snapshot of it along with the HTML.
-- Invalid HTML tag nesting.
-
-It can also happen if the client has a browser extension installed which messes with the HTML before React loaded.
-
-%s%s https://react.dev/link/hydration-mismatch 
-
-  ...
-    <RedirectErrorBoundary router={{...}}>
-      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
-        <SegmentViewNode type="page" pagePath="page.tsx">
-          <SegmentTrieNode>
-          <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
-            <HomePage params={Promise} searchParams={Promise}>
-              <main className="relative m...">
-                <div>
-                <div>
-                <div className="relative m...">
-                  <header>
-                  <section className="grid gap-6...">
-                    <ScratchCard hint={{id:1,title:"Wa...", ...}} scratched={false} onScratch={function onScratch} ...>
-                      <article className="relative o...">
-                        <div>
-                        <div>
-                        <div className="relative f...">
-                          <div>
-                          <div>
-                          <p>
-                          <div className="mt-auto">
-                            <button type="button" onClick={function onScratch} disabled={false} className="group rela..." ...>
-                              <div>
-                              <p>
-                              <span
-                                aria-hidden={true}
-                                className="scratch-foil pointer-events-none absolute inset-0"
-                                style={{
-+                                 animationDelay: "2.7417475011856864s"
--                                 animation-delay: "2.54521s"
-                                }}
-                              >
-                    <ScratchCard hint={{id:2,title:"Co...", ...}} scratched={false} onScratch={function onScratch} ...>
-                      <article className="relative o...">
-                        <div>
-                        <div>
-                        <div className="relative f...">
-                          <div>
-                          <div>
-                          <p>
-                          <div className="mt-auto">
-                            <button type="button" onClick={function onScratch} disabled={false} className="group rela..." ...>
-                              <div>
-                              <p>
-                              <span
-                                aria-hidden={true}
-                                className="scratch-foil pointer-events-none absolute inset-0"
-                                style={{
-+                                 animationDelay: "1.3674843545054052s"
--                                 animation-delay: "0.0379806s"
-                                }}
-                              >
-                    <ScratchCard hint={{id:3,title:"Fe...", ...}} scratched={false} onScratch={function onScratch} ...>
-                      <article className="relative o...">
-                        <div>
-                        <div>
-                        <div className="relative f...">
-                          <div>
-                          <div>
-                          <p>
-                          <div className="mt-auto">
-                            <button type="button" onClick={function onScratch} disabled={false} className="group rela..." ...>
-                              <div>
-                              <p>
-                              <span
-                                aria-hidden={true}
-                                className="scratch-foil pointer-events-none absolute inset-0"
-                                style={{
-+                                 animationDelay: "0.4408723491438238s"
--                                 animation-delay: "0.406142s"
-                                }}
-                              >
-                    <ScratchCard hint={{id:4,title:"Fi...", ...}} scratched={false} onScratch={function onScratch} ...>
-                      <article className="relative o...">
-                        <div>
-                        <div>
-                        <div className="relative f...">
-                          <div>
-                          <div>
-                          <p>
-                          <div className="mt-auto">
-                            <button type="button" onClick={function onScratch} disabled={false} className="group rela..." ...>
-                              <div>
-                              <p>
-                              <span
-                                aria-hidden={true}
-                                className="scratch-foil pointer-events-none absolute inset-0"
-                                style={{
-+                                 animationDelay: "1.6340919776567704s"
--                                 animation-delay: "3.38663s"
++                                 animationDelay: "2.2440054057868775s"
+-                                 animation-delay: "2.68311s"
                                 }}
                               >
                   ...

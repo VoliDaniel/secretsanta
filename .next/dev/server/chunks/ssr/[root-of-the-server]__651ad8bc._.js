@@ -103,7 +103,7 @@ const baseHints = [
         id: 4,
         title: "Final Reveal",
         prompt: "One last hint before the big day.",
-        reveal: "Your match’s badge: 0x18A93."
+        reveal: "Your match’s badge in hex: 0x18A93."
     }
 ];
 function startOfWeek(date) {
