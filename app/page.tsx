@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import { useMemo, useState } from "react";
 import { SparklesIcon } from "./sparkles-icon";
 
@@ -12,6 +13,10 @@ type Hint = {
     href: string;
     label: string;
     download?: boolean;
+  };
+  image?: {
+    src: string;
+    alt: string;
   };
   availableFrom: Date;
 };
@@ -33,7 +38,11 @@ const baseHints: BaseHint[] = [
     id: 2,
     title: "Cozy Clue",
     prompt: "Could your Santa love something comfy?",
-    reveal: "Think soft textures and the scent of pine on a winter night."
+    reveal: "Think soft textures and the scent of pine on a winter night.",
+    image: {
+      src: "/images/finans.png",
+      alt: "Finans hint"
+    }
   },
   {
     id: 3,
@@ -125,6 +134,17 @@ function ScratchCard({
             {hint.link.label}
             <span aria-hidden>↗</span>
           </a>
+        ) : null}
+        {scratched && hint.image ? (
+          <div className="overflow-hidden rounded-xl border border-white/10 bg-black/20">
+            <Image
+              src={hint.image.src}
+              alt={hint.image.alt}
+              width={800}
+              height={600}
+              className="h-auto w-full object-cover"
+            />
+          </div>
         ) : null}
         <div className="mt-auto">
           <button

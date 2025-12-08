@@ -333,6 +333,10 @@ img, video {
   height: 18rem;
 }
 
+.h-auto {
+  height: auto;
+}
+
 .h-full {
   height: 100%;
 }
@@ -442,6 +446,10 @@ img, video {
   border-color: #ffffff1a;
 }
 
+.bg-black\/20 {
+  background-color: #0003;
+}
+
 .bg-holly {
   --tw-bg-opacity: 1;
   background-color: rgb(219 27 58 / var(--tw-bg-opacity));
@@ -506,6 +514,11 @@ img, video {
 
 .to-white\/5 {
   --tw-gradient-to: #ffffff0d var(--tw-gradient-to-position);
+}
+
+.object-cover {
+  -o-object-fit: cover;
+  object-fit: cover;
 }
 
 .p-6 {
