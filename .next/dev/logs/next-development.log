@@ -1,5 +1,5 @@
-[00:00:01.036] Server  LOG      ✓ Ready in 671ms
-[00:00:03.192] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:01.063] Server  LOG      ✓ Ready in 692ms
+[00:00:03.903] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -24,7 +24,7 @@ It can also happen if the client has a browser extension installed which messes 
                 <div className="relative m...">
                   <header>
                   <section className="grid gap-6...">
-                    <ScratchCard hint={{id:1,title:"Wa...", ...}}>
+                    <ScratchCard hint={{id:1,title:"Wa...", ...}} scratched={false} onScratch={function onScratch} ...>
                       <article className="relative o...">
                         <div>
                         <div>
@@ -33,18 +33,18 @@ It can also happen if the client has a browser extension installed which messes 
                           <div>
                           <p>
                           <div className="mt-auto">
-                            <button type="button" onClick={function onClick} className="group rela..." ...>
+                            <button type="button" onClick={function onScratch} disabled={false} className="group rela..." ...>
                               <div>
                               <p>
                               <span
                                 aria-hidden={true}
                                 className="scratch-foil pointer-events-none absolute inset-0"
                                 style={{
-+                                 animationDelay: "2.155884618566378s"
--                                 animation-delay: "3.09634s"
++                                 animationDelay: "0.2667940794308641s"
+-                                 animation-delay: "3.59231s"
                                 }}
                               >
-                    <ScratchCard hint={{id:2,title:"Co...", ...}}>
+                    <ScratchCard hint={{id:2,title:"Co...", ...}} scratched={false} onScratch={function onScratch} ...>
                       <article className="relative o...">
                         <div>
                         <div>
@@ -53,18 +53,18 @@ It can also happen if the client has a browser extension installed which messes 
                           <div>
                           <p>
                           <div className="mt-auto">
-                            <button type="button" onClick={function onClick} className="group rela..." ...>
+                            <button type="button" onClick={function onScratch} disabled={false} className="group rela..." ...>
                               <div>
                               <p>
                               <span
                                 aria-hidden={true}
                                 className="scratch-foil pointer-events-none absolute inset-0"
                                 style={{
-+                                 animationDelay: "3.5942569651525273s"
--                                 animation-delay: "3.07159s"
++                                 animationDelay: "1.9829953650724166s"
+-                                 animation-delay: "0.217611s"
                                 }}
                               >
-                    <ScratchCard hint={{id:3,title:"Fe...", ...}}>
+                    <ScratchCard hint={{id:3,title:"Fe...", ...}} scratched={false} onScratch={function onScratch} ...>
                       <article className="relative o...">
                         <div>
                         <div>
@@ -73,18 +73,18 @@ It can also happen if the client has a browser extension installed which messes 
                           <div>
                           <p>
                           <div className="mt-auto">
-                            <button type="button" onClick={function onClick} className="group rela..." ...>
+                            <button type="button" onClick={function onScratch} disabled={false} className="group rela..." ...>
                               <div>
                               <p>
                               <span
                                 aria-hidden={true}
                                 className="scratch-foil pointer-events-none absolute inset-0"
                                 style={{
-+                                 animationDelay: "1.2459994547362059s"
--                                 animation-delay: "3.45878s"
++                                 animationDelay: "0.6306864476732854s"
+-                                 animation-delay: "2.22773s"
                                 }}
                               >
-                    <ScratchCard hint={{id:4,title:"Fi...", ...}}>
+                    <ScratchCard hint={{id:4,title:"Fi...", ...}} scratched={false} onScratch={function onScratch} ...>
                       <article className="relative o...">
                         <div>
                         <div>
@@ -93,22 +93,22 @@ It can also happen if the client has a browser extension installed which messes 
                           <div>
                           <p>
                           <div className="mt-auto">
-                            <button type="button" onClick={function onClick} className="group rela..." ...>
+                            <button type="button" onClick={function onScratch} disabled={false} className="group rela..." ...>
                               <div>
                               <p>
                               <span
                                 aria-hidden={true}
                                 className="scratch-foil pointer-events-none absolute inset-0"
                                 style={{
-+                                 animationDelay: "0.16157205742384262s"
--                                 animation-delay: "2.47025s"
++                                 animationDelay: "2.207730993852839s"
+-                                 animation-delay: "1.19718s"
                                 }}
                               >
                   ...
         ...
       ...
 
-[00:00:19.648] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:02:17.586] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -121,100 +121,96 @@ It can also happen if the client has a browser extension installed which messes 
 %s%s https://react.dev/link/hydration-mismatch 
 
   ...
-    <RedirectErrorBoundary router={{...}}>
-      <InnerLayoutRouter url="/" tree={[...]} params={{}} cacheNode={{lazyData:null, ...}} segmentPath={[...]} ...>
-        <SegmentViewNode type="page" pagePath="page.tsx">
-          <SegmentTrieNode>
-          <ClientPageRoot Component={function HomePage} serverProvidedParams={{...}}>
-            <HomePage params={Promise} searchParams={Promise}>
-              <main className="relative m...">
-                <div>
-                <div>
-                <div className="relative m...">
-                  <header>
-                  <section className="grid gap-6...">
-                    <ScratchCard hint={{id:1,title:"Wa...", ...}}>
-                      <article className="relative o...">
-                        <div>
-                        <div>
-                        <div className="relative f...">
-                          <div>
-                          <div>
-                          <p>
-                          <div className="mt-auto">
-                            <button type="button" onClick={function onClick} className="group rela..." ...>
-                              <div>
-                              <p>
-                              <span
-                                aria-hidden={true}
-                                className="scratch-foil pointer-events-none absolute inset-0"
-                                style={{
-+                                 animationDelay: "0.8741983164937053s"
--                                 animation-delay: "0.579253s"
-                                }}
-                              >
-                    <ScratchCard hint={{id:2,title:"Co...", ...}}>
-                      <article className="relative o...">
-                        <div>
-                        <div>
-                        <div className="relative f...">
-                          <div>
-                          <div>
-                          <p>
-                          <div className="mt-auto">
-                            <button type="button" onClick={function onClick} className="group rela..." ...>
-                              <div>
-                              <p>
-                              <span
-                                aria-hidden={true}
-                                className="scratch-foil pointer-events-none absolute inset-0"
-                                style={{
-+                                 animationDelay: "3.098080201785925s"
--                                 animation-delay: "3.37305s"
-                                }}
-                              >
-                    <ScratchCard hint={{id:3,title:"Fe...", ...}}>
-                      <article className="relative o...">
-                        <div>
-                        <div>
-                        <div className="relative f...">
-                          <div>
-                          <div>
-                          <p>
-                          <div className="mt-auto">
-                            <button type="button" onClick={function onClick} className="group rela..." ...>
-                              <div>
-                              <p>
-                              <span
-                                aria-hidden={true}
-                                className="scratch-foil pointer-events-none absolute inset-0"
-                                style={{
-+                                 animationDelay: "2.6277473715980304s"
--                                 animation-delay: "0.821167s"
-                                }}
-                              >
-                    <ScratchCard hint={{id:4,title:"Fi...", ...}}>
-                      <article className="relative o...">
-                        <div>
-                        <div>
-                        <div className="relative f...">
-                          <div>
-                          <div>
-                          <p>
-                          <div className="mt-auto">
-                            <button type="button" onClick={function onClick} className="group rela..." ...>
-                              <div>
-                              <p>
-                              <span
-                                aria-hidden={true}
-                                className="scratch-foil pointer-events-none absolute inset-0"
-                                style={{
-+                                 animationDelay: "0.13684383039391612s"
--                                 animation-delay: "2.31509s"
-                                }}
-                              >
+    <HotReload globalError={[...]} webSocket={WebSocket} staticIndicatorState={{pathname:null, ...}}>
+      <AppDevOverlayErrorBoundary globalError={[...]}>
+        <ReplaySsrOnlyErrors>
+        <DevRootHTTPAccessFallbackBoundary>
+          <HTTPAccessFallbackBoundary notFound={<NotAllowedRootHTTPFallbackError>}>
+            <HTTPAccessFallbackErrorBoundary pathname="/" notFound={<NotAllowedRootHTTPFallbackError>} ...>
+              <RedirectBoundary>
+                <RedirectErrorBoundary router={{...}}>
+                  <Head>
+                  <__next_root_layout_boundary__>
+                    <SegmentViewNode type="layout" pagePath="layout.tsx">
+                      <SegmentTrieNode>
+                      <link>
+                      <script>
+                      <RootLayout>
+                        <html lang="en" className="playfair_d...">
+                          <body
+                            className="min-h-screen bg-gradient-to-br from-pine via-[#0c2d18] to-[#0a2113] text-snow a..."
+-                           cz-shortcut-listen="true"
+                          >
+                            <div>
+                            ...
+                              <section className="grid gap-6...">
+                                ...
+                                  <div className="relative f...">
+                                    <div>
+                                    <div>
+                                    <p>
+                                    <div className="mt-auto">
+                                      <button type="button" onClick={function onScratch} disabled={false} ...>
+                                        <div>
+                                        <p>
+                                        <span
+                                          aria-hidden={true}
+                                          className="scratch-foil pointer-events-none absolute inset-0"
+                                          style={{
++                                           animationDelay: "2.2861016831822702s"
+-                                           animation-delay: "0.157341s"
+                                          }}
+                                        >
+                                ...
+                                  <div className="relative f...">
+                                    <div>
+                                    <div>
+                                    <p>
+                                    <div className="mt-auto">
+                                      <button type="button" onClick={function onScratch} disabled={false} ...>
+                                        <div>
+                                        <p>
+                                        <span
+                                          aria-hidden={true}
+                                          className="scratch-foil pointer-events-none absolute inset-0"
+                                          style={{
++                                           animationDelay: "1.7539626204446357s"
+-                                           animation-delay: "2.95466s"
+                                          }}
+                                        >
+                                ...
+                                  <div className="relative f...">
+                                    <div>
+                                    <div>
+                                    <p>
+                                    <div className="mt-auto">
+                                      <button type="button" onClick={function onScratch} disabled={false} ...>
+                                        <div>
+                                        <p>
+                                        <span
+                                          aria-hidden={true}
+                                          className="scratch-foil pointer-events-none absolute inset-0"
+                                          style={{
++                                           animationDelay: "1.281856236444387s"
+-                                           animation-delay: "2.5553s"
+                                          }}
+                                        >
+                                ...
+                                  <div className="relative f...">
+                                    <div>
+                                    <div>
+                                    <p>
+                                    <div className="mt-auto">
+                                      <button type="button" onClick={function onScratch} disabled={false} ...>
+                                        <div>
+                                        <p>
+                                        <span
+                                          aria-hidden={true}
+                                          className="scratch-foil pointer-events-none absolute inset-0"
+                                          style={{
++                                           animationDelay: "0.6124184298325823s"
+-                                           animation-delay: "0.392837s"
+                                          }}
+                                        >
                   ...
-        ...
-      ...
 
-[00:02:23.985] Server  LOG      ✓ Compiled in 63ms

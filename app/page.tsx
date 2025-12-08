@@ -11,6 +11,7 @@ type Hint = {
   link?: {
     href: string;
     label: string;
+    download?: boolean;
   };
   availableFrom: Date;
 };
@@ -38,13 +39,18 @@ const baseHints: BaseHint[] = [
     id: 3,
     title: "Festive Favorite",
     prompt: "Scratch to find a shared tradition.",
-    reveal: "They never skip gingerbread-making day, no matter how busy."
+    reveal: "They never skip gingerbread-making day, no matter how busy.",
+    link: {
+      href: "/music/big-mads-energy.mp3",
+      label: "Download Big Mads Energy.mp3",
+      download: true
+    }
   },
   {
     id: 4,
     title: "Final Reveal",
     prompt: "One last hint before the big day.",
-    reveal: "Your match is the one who always sneaks in to switch on the tree lights first."
+    reveal: "Your match’s badge in hex: 0x18A93."
   }
 ];
 
@@ -113,6 +119,7 @@ function ScratchCard({
             href={hint.link.href}
             target="_blank"
             rel="noreferrer"
+            download={hint.link.download}
             className="inline-flex w-fit items-center gap-2 rounded-full bg-holly px-4 py-2 text-sm font-semibold text-white shadow-glow transition hover:scale-105 hover:shadow-glow/80 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-gold"
           >
             {hint.link.label}
@@ -162,6 +169,7 @@ function ScratchCard({
 }
 
 export default function HomePage() {
+  const DEBUG_SHOW_ALL = true; // set to false to enforce unlock schedule
   const availability = useMemo(() => {
     const today = new Date();
     const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
@@ -192,9 +200,9 @@ export default function HomePage() {
     () =>
       baseHints.map((hint) => ({
         ...hint,
-        availableFrom: availability.get(hint.id) ?? new Date(0)
+        availableFrom: DEBUG_SHOW_ALL ? new Date(0) : availability.get(hint.id) ?? new Date(0)
       })),
-    [availability]
+    [availability, DEBUG_SHOW_ALL]
   );
 
   const toggleScratch = (id: number) => {
@@ -230,7 +238,7 @@ export default function HomePage() {
               hint={hint}
               scratched={scratchedIds.has(hint.id)}
               onScratch={() => toggleScratch(hint.id)}
-              available={now >= hint.availableFrom}
+              available={DEBUG_SHOW_ALL || now >= hint.availableFrom}
             />
           ))}
         </section>
