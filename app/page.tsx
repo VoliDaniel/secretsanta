@@ -189,7 +189,7 @@ function ScratchCard({
 }
 
 export default function HomePage() {
-  const DEBUG_SHOW_ALL = true; // set to false to enforce unlock schedule
+  const DEBUG_SHOW_ALL = false; // set to false to enforce unlock schedule
   const availability = useMemo(() => {
     const today = new Date();
     const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());

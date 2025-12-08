@@ -330,7 +330,7 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
     }, this);
 }
 function HomePage() {
-    const DEBUG_SHOW_ALL = true; // set to false to enforce unlock schedule
+    const DEBUG_SHOW_ALL = false; // set to false to enforce unlock schedule
     const availability = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>{
         const today = new Date();
         const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
@@ -355,7 +355,7 @@ function HomePage() {
     const now = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>new Date(), []);
     const hints = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$server$2f$route$2d$modules$2f$app$2d$page$2f$vendored$2f$ssr$2f$react$2e$js__$5b$app$2d$ssr$5d$__$28$ecmascript$29$__["useMemo"])(()=>baseHints.map((hint)=>({
                 ...hint,
-                availableFrom: ("TURBOPACK compile-time truthy", 1) ? new Date(0) : "TURBOPACK unreachable"
+                availableFrom: ("TURBOPACK compile-time falsy", 0) ? "TURBOPACK unreachable" : availability.get(hint.id) ?? new Date(0)
             })), [
         availability,
         DEBUG_SHOW_ALL

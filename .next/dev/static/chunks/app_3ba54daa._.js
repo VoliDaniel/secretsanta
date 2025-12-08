@@ -339,7 +339,7 @@ _s(ScratchCard, "3Dk3cXgptwJg2wqSzgfjm2Ii5AI=");
 _c = ScratchCard;
 function HomePage() {
     _s1();
-    const DEBUG_SHOW_ALL = true; // set to false to enforce unlock schedule
+    const DEBUG_SHOW_ALL = false; // set to false to enforce unlock schedule
     const availability = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "HomePage.useMemo[availability]": ()=>{
             const today = new Date();
@@ -370,7 +370,7 @@ function HomePage() {
         "HomePage.useMemo[hints]": ()=>baseHints.map({
                 "HomePage.useMemo[hints]": (hint)=>({
                         ...hint,
-                        availableFrom: ("TURBOPACK compile-time truthy", 1) ? new Date(0) : "TURBOPACK unreachable"
+                        availableFrom: ("TURBOPACK compile-time falsy", 0) ? "TURBOPACK unreachable" : availability.get(hint.id) ?? new Date(0)
                     })
             }["HomePage.useMemo[hints]"])
     }["HomePage.useMemo[hints]"], [
