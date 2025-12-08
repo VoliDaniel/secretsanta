@@ -84,8 +84,8 @@ const baseHints = [
         prompt: "Could your Santa love something comfy?",
         reveal: "Think soft textures and the scent of pine on a winter night.",
         image: {
-            src: "/images/finans.png",
-            alt: "Finans hint"
+            src: "/images/ThereMightBeAHintOnGithub.png",
+            alt: "ThereMightBeAHintOnGithub hint"
         }
     },
     {
