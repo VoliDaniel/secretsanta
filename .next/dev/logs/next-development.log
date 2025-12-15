@@ -1,5 +1,5 @@
-[00:00:01.301] Server  LOG      ✓ Ready in 914ms
-[00:00:06.481] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
+[00:00:03.527] Server  LOG      ✓ Ready in 2.6s
+[00:00:09.905] Browser ERROR   A tree hydrated but some attributes of the server rendered HTML didn't match the client properties. This won't be patched up. This can happen if a SSR-ed Client Component used:
 
 - A server/client branch `if (typeof window !== 'undefined')`.
 - Variable input such as `Date.now()` or `Math.random()` which changes each time it's called.
@@ -40,8 +40,28 @@ It can also happen if the client has a browser extension installed which messes 
                                 aria-hidden={true}
                                 className="scratch-foil pointer-events-none absolute inset-0"
                                 style={{
-+                                 animationDelay: "2.370540541289772s"
--                                 animation-delay: "0.206482s"
++                                 animationDelay: "2.8253597613914914s"
+-                                 animation-delay: "3.0236s"
+                                }}
+                              >
+                    <ScratchCard hint={{id:2,title:"Co...", ...}} scratched={false} onScratch={function onScratch} ...>
+                      <article className="relative o...">
+                        <div>
+                        <div>
+                        <div className="relative f...">
+                          <div>
+                          <div>
+                          <p>
+                          <div className="mt-auto">
+                            <button type="button" onClick={function onScratch} disabled={false} className="group rela..." ...>
+                              <div>
+                              <p>
+                              <span
+                                aria-hidden={true}
+                                className="scratch-foil pointer-events-none absolute inset-0"
+                                style={{
++                                 animationDelay: "3.1007535255823475s"
+-                                 animation-delay: "3.62486s"
                                 }}
                               >
                     ...

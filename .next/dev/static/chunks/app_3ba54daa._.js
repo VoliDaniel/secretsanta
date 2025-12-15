@@ -107,20 +107,6 @@ const baseHints = [
         reveal: "Your match’s badge in hex: 0x18A93."
     }
 ];
-function startOfWeek(date) {
-    // Start week on Monday
-    const day = date.getDay(); // Sunday 0 ... Saturday 6
-    const diff = (day + 6) % 7; // days since Monday
-    const start = new Date(date);
-    start.setHours(0, 0, 0, 0);
-    start.setDate(start.getDate() - diff);
-    return start;
-}
-function addDays(date, days) {
-    const d = new Date(date);
-    d.setDate(d.getDate() + days);
-    return d;
-}
 function formatUnlock(date) {
     return new Intl.DateTimeFormat("en", {
         weekday: "long",
@@ -147,14 +133,14 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                 className: "absolute inset-0 bg-gradient-to-br from-white/5 via-transparent to-white/5 opacity-60"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 112,
+                lineNumber: 96,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute -top-32 right-[-120px] h-72 w-72 rotate-12 rounded-full bg-gradient-to-br from-gold/35 via-holly/25 to-transparent blur-3xl"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 113,
+                lineNumber: 97,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -171,7 +157,7 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 116,
+                                lineNumber: 100,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -179,13 +165,13 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                                 children: scratched ? "Revealed" : "Hidden"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 117,
+                                lineNumber: 101,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 115,
+                        lineNumber: 99,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -195,7 +181,7 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                                 className: "h-5 w-5 text-gold"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 120,
+                                lineNumber: 104,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h3", {
@@ -203,13 +189,13 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                                 children: hint.title
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 121,
+                                lineNumber: 105,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 119,
+                        lineNumber: 103,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -217,7 +203,7 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                         children: scratched ? hint.reveal : hint.prompt
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 123,
+                        lineNumber: 107,
                         columnNumber: 9
                     }, this),
                     scratched && hint.link ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("a", {
@@ -233,13 +219,13 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                                 children: "↗"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 135,
+                                lineNumber: 119,
                                 columnNumber: 13
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 127,
+                        lineNumber: 111,
                         columnNumber: 11
                     }, this) : null,
                     scratched && hint.image ? /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -252,12 +238,12 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                             className: "h-auto w-full object-cover"
                         }, void 0, false, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 140,
+                            lineNumber: 124,
                             columnNumber: 13
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 139,
+                        lineNumber: 123,
                         columnNumber: 11
                     }, this) : null,
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -277,7 +263,7 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                                             children: scratched ? "You revealed this clue" : available ? "Scratch to reveal" : "Locked until date"
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 159,
+                                            lineNumber: 143,
                                             columnNumber: 15
                                         }, this),
                                         /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -285,13 +271,13 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                                             children: available ? "✦" : formatUnlock(hint.availableFrom)
                                         }, void 0, false, {
                                             fileName: "[project]/app/page.tsx",
-                                            lineNumber: 166,
+                                            lineNumber: 150,
                                             columnNumber: 15
                                         }, this)
                                     ]
                                 }, void 0, true, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 158,
+                                    lineNumber: 142,
                                     columnNumber: 13
                                 }, this),
                                 /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -299,7 +285,7 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                                     children: scratched ? "Feel free to revisit this hint anytime." : available ? "Gently swipe the snow to see what's underneath." : "Come back on the unlock date to reveal this hint."
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 170,
+                                    lineNumber: 154,
                                     columnNumber: 13
                                 }, this),
                                 !scratched && available && /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("span", {
@@ -308,30 +294,30 @@ function ScratchCard({ hint, scratched, onScratch, available }) {
                                     style: shimmerStyle
                                 }, void 0, false, {
                                     fileName: "[project]/app/page.tsx",
-                                    lineNumber: 178,
+                                    lineNumber: 162,
                                     columnNumber: 15
                                 }, this)
                             ]
                         }, void 0, true, {
                             fileName: "[project]/app/page.tsx",
-                            lineNumber: 150,
+                            lineNumber: 134,
                             columnNumber: 11
                         }, this)
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 149,
+                        lineNumber: 133,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 114,
+                lineNumber: 98,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 111,
+        lineNumber: 95,
         columnNumber: 5
     }, this);
 }
@@ -342,23 +328,11 @@ function HomePage() {
     const DEBUG_SHOW_ALL = false; // set to false to enforce unlock schedule
     const availability = (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$index$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["useMemo"])({
         "HomePage.useMemo[availability]": ()=>{
-            const today = new Date();
-            const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-            const weekStart = startOfWeek(todayStart);
-            // This Wednesday (or next if already past)
-            let thisWednesday = addDays(weekStart, 2);
-            if (thisWednesday < todayStart) {
-                thisWednesday = addDays(thisWednesday, 7);
-            }
-            // Next week (relative to current week)
-            const nextWeekStart = addDays(weekStart, 7);
-            const nextMonday = addDays(nextWeekStart, 0);
-            const nextFriday = addDays(nextWeekStart, 4);
             const map = new Map();
             map.set(1, new Date(0)); // always available
-            map.set(2, thisWednesday);
-            map.set(3, nextMonday);
-            map.set(4, nextFriday);
+            map.set(2, new Date(0)); // always available
+            map.set(3, new Date(2025, 11, 17)); // 17/12/2025
+            map.set(4, new Date(2025, 11, 19)); // 19/12/2025
             return map;
         }
     }["HomePage.useMemo[availability]"], []);
@@ -392,14 +366,14 @@ function HomePage() {
                 "aria-hidden": true
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 238,
+                lineNumber: 207,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
                 className: "absolute inset-0 bg-[radial-gradient(circle_at_20%_20%,rgba(247,208,70,0.08),transparent_35%),radial-gradient(circle_at_80%_0%,rgba(219,27,58,0.08),transparent_40%)]"
             }, void 0, false, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 239,
+                lineNumber: 208,
                 columnNumber: 7
             }, this),
             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("div", {
@@ -413,7 +387,7 @@ function HomePage() {
                                 children: "Secret Santa 2025"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 242,
+                                lineNumber: 211,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("h1", {
@@ -421,7 +395,7 @@ function HomePage() {
                                 children: "Scratch Calendar of Cozy Clues"
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 245,
+                                lineNumber: 214,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -429,13 +403,13 @@ function HomePage() {
                                 children: "Reveal one hint at a time to keep the mystery alive. Four festive clues lead you straight to your Secret Santa match—starting with a mischievous carol."
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 248,
+                                lineNumber: 217,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 241,
+                        lineNumber: 210,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("section", {
@@ -447,12 +421,12 @@ function HomePage() {
                                 available: DEBUG_SHOW_ALL || now >= hint.availableFrom
                             }, hint.id, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 256,
+                                lineNumber: 225,
                                 columnNumber: 13
                             }, this))
                     }, void 0, false, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 254,
+                        lineNumber: 223,
                         columnNumber: 9
                     }, this),
                     /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("footer", {
@@ -465,14 +439,14 @@ function HomePage() {
                                         className: "h-4 w-4 text-gold"
                                     }, void 0, false, {
                                         fileName: "[project]/app/page.tsx",
-                                        lineNumber: 268,
+                                        lineNumber: 237,
                                         columnNumber: 13
                                     }, this),
                                     "Hosted on Vercel · Share the link, not the secrets."
                                 ]
                             }, void 0, true, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 267,
+                                lineNumber: 236,
                                 columnNumber: 11
                             }, this),
                             /*#__PURE__*/ (0, __TURBOPACK__imported__module__$5b$project$5d2f$node_modules$2f$next$2f$dist$2f$compiled$2f$react$2f$jsx$2d$dev$2d$runtime$2e$js__$5b$app$2d$client$5d$__$28$ecmascript$29$__["jsxDEV"])("p", {
@@ -480,25 +454,25 @@ function HomePage() {
                                 children: "Pro tip: reveal one clue per day like a mini Advent calendar to keep the suspense warm and bright."
                             }, void 0, false, {
                                 fileName: "[project]/app/page.tsx",
-                                lineNumber: 271,
+                                lineNumber: 240,
                                 columnNumber: 11
                             }, this)
                         ]
                     }, void 0, true, {
                         fileName: "[project]/app/page.tsx",
-                        lineNumber: 266,
+                        lineNumber: 235,
                         columnNumber: 9
                     }, this)
                 ]
             }, void 0, true, {
                 fileName: "[project]/app/page.tsx",
-                lineNumber: 240,
+                lineNumber: 209,
                 columnNumber: 7
             }, this)
         ]
     }, void 0, true, {
         fileName: "[project]/app/page.tsx",
-        lineNumber: 237,
+        lineNumber: 206,
         columnNumber: 5
     }, this);
 }

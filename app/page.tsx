@@ -63,22 +63,6 @@ const baseHints: BaseHint[] = [
   }
 ];
 
-function startOfWeek(date: Date) {
-  // Start week on Monday
-  const day = date.getDay(); // Sunday 0 ... Saturday 6
-  const diff = (day + 6) % 7; // days since Monday
-  const start = new Date(date);
-  start.setHours(0, 0, 0, 0);
-  start.setDate(start.getDate() - diff);
-  return start;
-}
-
-function addDays(date: Date, days: number) {
-  const d = new Date(date);
-  d.setDate(d.getDate() + days);
-  return d;
-}
-
 function formatUnlock(date: Date) {
   return new Intl.DateTimeFormat("en", {
     weekday: "long",
@@ -191,26 +175,11 @@ function ScratchCard({
 export default function HomePage() {
   const DEBUG_SHOW_ALL = false; // set to false to enforce unlock schedule
   const availability = useMemo(() => {
-    const today = new Date();
-    const todayStart = new Date(today.getFullYear(), today.getMonth(), today.getDate());
-    const weekStart = startOfWeek(todayStart);
-
-    // This Wednesday (or next if already past)
-    let thisWednesday = addDays(weekStart, 2);
-    if (thisWednesday < todayStart) {
-      thisWednesday = addDays(thisWednesday, 7);
-    }
-
-    // Next week (relative to current week)
-    const nextWeekStart = addDays(weekStart, 7);
-    const nextMonday = addDays(nextWeekStart, 0);
-    const nextFriday = addDays(nextWeekStart, 4);
-
     const map = new Map<number, Date>();
     map.set(1, new Date(0)); // always available
-    map.set(2, thisWednesday);
-    map.set(3, nextMonday);
-    map.set(4, nextFriday);
+    map.set(2, new Date(0)); // always available
+    map.set(3, new Date(2025, 11, 17)); // 17/12/2025
+    map.set(4, new Date(2025, 11, 19)); // 19/12/2025
     return map;
   }, []);
 
