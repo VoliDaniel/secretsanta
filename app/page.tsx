@@ -26,42 +26,44 @@ type BaseHint = Omit<Hint, "availableFrom">;
 const baseHints: BaseHint[] = [
   {
     id: 1,
-    title: "Warming Up",
-    prompt: "Scratch for your first tune...",
-    reveal: "Start with the jolliest earworm of them all.",
+    title: "Welcome Aboard, Morten",
+    prompt: "First day, first clue. Scratch for a welcome tune...",
+    reveal:
+      "Welcome to the team! Someone here is already your Secret Santa. Start the hunt with the jolliest earworm of them all.",
     link: {
       href: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
-      label: "Open the secret carol"
+      label: "Open the welcome carol"
     }
   },
   {
     id: 2,
-    title: "Cozy Clue",
-    prompt: "Could your Santa love something comfy?",
-    reveal: "Think soft textures and the scent of pine on a winter night.",
-    image: {
-      src: "/images/ThereMightBeAHintOnGithub.png",
-      alt: "ThereMightBeAHintOnGithub hint"
-    }
+    title: "Detective Mode",
+    prompt: "A week in. Know your way to the coffee yet?",
+    reveal:
+      "Whoever built this page left fingerprints. Find out where the code lives, and read the README."
   },
   {
     id: 3,
-    title: "Festive Favorite",
-    prompt: "Scratch to find a shared tradition.",
-    reveal: "They never skip gingerbread-making day, no matter how busy.",
-    link: {
-      href: "/music/big-mads-energy.mp3",
-      label: "Download Big Mads Energy.mp3",
-      download: true
-    }
+    title: "Getting Warmer",
+    prompt: "You've met a few faces by now...",
+    reveal: "Your Santa's first name has six letters. Start counting around the office."
   },
   {
     id: 4,
     title: "Final Reveal",
     prompt: "One last hint before the big day.",
-    reveal: "Your match’s badge in hex: 0x18A93."
+    reveal: "Your Santa’s badge in hex: 0x18A93."
   }
 ];
+
+// Morten starts 1 December 2027. Clues unlock one week apart.
+const START_YEAR = 2027;
+const UNLOCK_DATES: Record<number, Date> = {
+  1: new Date(START_YEAR, 11, 1), // 1/12 – first day
+  2: new Date(START_YEAR, 11, 8), // 8/12
+  3: new Date(START_YEAR, 11, 15), // 15/12
+  4: new Date(START_YEAR, 11, 22) // 22/12 – right before Christmas
+};
 
 function formatUnlock(date: Date) {
   return new Intl.DateTimeFormat("en", {
@@ -174,14 +176,10 @@ function ScratchCard({
 
 export default function HomePage() {
   const DEBUG_SHOW_ALL = false; // set to false to enforce unlock schedule
-  const availability = useMemo(() => {
-    const map = new Map<number, Date>();
-    map.set(1, new Date(0)); // always available
-    map.set(2, new Date(0)); // always available
-    map.set(3, new Date(2025, 11, 17)); // 17/12/2025
-    map.set(4, new Date(2025, 11, 19)); // 19/12/2025
-    return map;
-  }, []);
+  const availability = useMemo(
+    () => new Map<number, Date>(Object.entries(UNLOCK_DATES).map(([id, d]) => [Number(id), d])),
+    []
+  );
 
   const [scratchedIds, setScratchedIds] = useState<Set<number>>(new Set());
   const now = useMemo(() => new Date(), []);
@@ -209,14 +207,15 @@ export default function HomePage() {
       <div className="relative mx-auto flex max-w-6xl flex-col gap-12 px-6 pt-12 md:px-10 lg:px-16">
         <header className="flex flex-col gap-4 text-center">
           <div className="mx-auto inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-4 py-1 text-xs font-semibold uppercase tracking-[0.35em] text-gold shadow-glow">
-            Secret Santa 2025
+            Secret Santa {START_YEAR}
           </div>
           <h1 className="text-balance font-festive text-4xl text-white drop-shadow-sm sm:text-5xl md:text-6xl">
-            Scratch Calendar of Cozy Clues
+            Welcome, Morten
           </h1>
           <p className="mx-auto max-w-2xl text-pretty text-sm leading-relaxed text-white/80 sm:text-base">
-            Reveal one hint at a time to keep the mystery alive. Four festive clues lead you
-            straight to your Secret Santa match—starting with a mischievous carol.
+            New job, new colleagues, and already a Secret Santa. One clue unlocks every week
+            in December. Follow all four and you&apos;ll know who&apos;s behind the beard before
+            Christmas.
           </p>
         </header>
 

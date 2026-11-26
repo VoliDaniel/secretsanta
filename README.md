@@ -1,3 +1,3 @@
 # Secret Santa Scratch
 
-Mads, if you're reading this, you found the Secret Santa! 🎄🎁
+Morten, if you're reading this, you found your Secret Santa! 🎄🎁
