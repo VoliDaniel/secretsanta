@@ -56,13 +56,13 @@ const baseHints: BaseHint[] = [
   }
 ];
 
-// Morten starts 1 December 2027. Clues unlock one week apart.
+// Morten starts 1 December 2027. All clues revealed by 17 December (last workday before the holiday).
 const START_YEAR = 2027;
 const UNLOCK_DATES: Record<number, Date> = {
-  1: new Date(START_YEAR, 11, 1), // 1/12 – first day
-  2: new Date(START_YEAR, 11, 8), // 8/12
-  3: new Date(START_YEAR, 11, 15), // 15/12
-  4: new Date(START_YEAR, 11, 22) // 22/12 – right before Christmas
+  1: new Date(START_YEAR, 11, 1), // Wed 1/12 – first day
+  2: new Date(START_YEAR, 11, 7), // Tue 7/12
+  3: new Date(START_YEAR, 11, 13), // Mon 13/12
+  4: new Date(START_YEAR, 11, 17) // Fri 17/12 – final reveal
 };
 
 function formatUnlock(date: Date) {
@@ -213,8 +213,8 @@ export default function HomePage() {
             Welcome, Morten
           </h1>
           <p className="mx-auto max-w-2xl text-pretty text-sm leading-relaxed text-white/80 sm:text-base">
-            New job, new colleagues, and already a Secret Santa. One clue unlocks every week
-            in December. Follow all four and you&apos;ll know who&apos;s behind the beard before
+            New job, new colleagues, and already a Secret Santa. Four clues unlock over your
+            first weeks here. Follow all four and you&apos;ll know who&apos;s behind the beard before
             Christmas.
           </p>
         </header>
